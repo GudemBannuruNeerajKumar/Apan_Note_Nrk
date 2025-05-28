@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    
+<!--About me content-->
+
+    <div style="background-color:lightgray;  border-radius:5px;">
+      <h2>About Me</h2>
+   
+        <p>My Name is Neeraj Kumar. I am from
+        <span id="add">...</span>
+        <span id="b1" onclick="rr()" style="cursor:pointer; color:orange">Read more</span>
+        </p>
+    </div>
+<!--Education-->
+   <div class="Education" style="background-color:lightgray; padding:10px;  border-radius:5px;">
+       <h2>Education<span></span></h2>
+       <p style="color:orange; cursor:pointer;" id="ed_read" onclick="edu()">read more</p>
+      
+      <div id="study" style="display:None;">   
+        <div class="school" style="background-color:pink;  border-radius:5px;">
+           <h3>School:</h3>
+             Name: Montessori E.M. High School<br>
+             Marks: 578<br>
+             Pass/Fail: Pass
+        </div>
+        <div class="Inter" style="background-color:pink;  border-radius:5px;">
+     
+            <h3>Inter:</h3>
+               Name: Narayana jr.college<br>
+              Marks: 896<br>
+              Pass/Fail: Pass
+         </div>
+        <div class="college" style="background-color:pink;  border-radius:5px;">
+       
+            <h3>College:</h3>
+             Name: GPREC<br>
+             Marks: 8.54<br>
+             Pass/Fail: Pass
+        </div>
+      </div>  
+     
+   </div>
+   
+<!--About me content script-->
+    <script>
+      var fullText = " Kurnool(Dist.), Andhra Pradesh(State), India(country). I have been living here since my childhood. My parents are also living here, but my grandparents lived in a village. Later, they migrated here. So, we have been living here now.";
+      var isExpanded = false;
+      
+
+      function rr() {
+        var add = document.getElementById('add');
+        var button = document.getElementById('b1');
+
+        if (!isExpanded) {
+          add.innerHTML = fullText;
+          button.innerHTML = "Read less";
+          isExpanded = true;
+        } else {
+          add.innerHTML = "...";
+          button.innerHTML = "Read more";
+          isExpanded = false;
+        }
+      }
+    </script>
+<!--Education script-->
+<script>
+  isex=false;
+  function edu()
+  {
+    
+    if(!isex)
+    {
+      document.getElementById('study').style.display="block";
+      document.getElementById('ed_read').innerHTML="read less";
+      isex=true;
+    }
+    else
+    {
+      document.getElementById('study').style.display="None";
+      document.getElementById('ed_read').innerHTML="read more";
+      isex=false;
+    }
+  }
+</script>
+
+
+
+
+  </body>
+</html>
